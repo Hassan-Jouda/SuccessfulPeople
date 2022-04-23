@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Use a free Google Firebase Database to allow visitors to leave comments on your web pages. From https://AlanSimpson.me/firebase"
+    />
+    <meta name="author" content="Alan Simpson" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User Comments</title>
+    
+    <section  class="navigation animate__animated animate__backInDown  ">
+      <div  class="nav-container">
+        <div class="brand bi bi-house-door ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+          </svg>            <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/final%20project.html"  >Home</a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li>
+              <a >Coding</a>
+              <ul class="nav-dropdown ">
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/linx.html">torvalds</a>
+                </li>
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/steve.html">steve jobs </a>
+                </li>
+                <li>
+                </li>
+              </ul>
+            </li>        </li>
+            <li>
+              <a href="#!">Writing</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/ghassan.html" >Ghassan Kanafani</a>
+                </li>
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/agatha.html">Agatha Christie</a>
+                </li>
+                <li>
+                </li>
+              </ul>
+            </li>        </li>
+            <li>
+              <a href="#!">Space</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/Hawking.html" >Stephen Hawking</a>
+                </li>
+                <li>
+                  <a href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/Armstrong.html#!">Neil Armstrong</a>
+                </li>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a  href="file:///home/pc/%D8%B3%D8%B7%D8%AD%20%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%A6%D9%8A/all%20peags/comments.html?"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+              </svg>feedback</a>
+              </ul>
+            </li>
+
+
+        </nav>     
+
+    </section>
+     
+
+    
+    <style>
+   
+   *{
+     margin: 0px;
+   }
+   .navigation {
+  height: 60px;
+  background: #373a40;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 5px;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  /* float: left; */
+  right: 1155px;
+  /* color: #1D9AF2; */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 120px;
+  top: -4px;
+  height: 60px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.5;
+  /* position: fixed; */
+  text-align: center;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  height: 60px;
+  /* position: fixed; */
+  top: -4px;
+}
+.brand:hover {
+  background: #2581dc;
+  color: #ffffff;
+  /* text-align: center; */
+  transform: scale(1.1);
+  /* height: 60px; */
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+  background-color: rgb(17, 17, 17);
+  opacity: 10;
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.534), 0 3px 6px rgba(0, 0, 0, 0.534); */
+  top: -4px;
+}
+
+.nav-container {
+  max-width: 1269px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  /* display: block;
+      padding: 0 40px;
+      line-height: 70px;
+      color: #ffffff;
+      text-decoration: none; */
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 70px;
+  text-decoration: none;
+  /* background-color: #f4623a; */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  /* opacity: 0.5; */
+  height: 30px;
+  background: #373a40;
+}
+nav ul li a:hover,
+nav ul li a:hover {
+  background: #2581dc;
+  color: #ffffff;
+
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+  background-color: rgb(17, 17, 17);
+  opacity: 10;
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.534), 0 3px 6px rgba(0, 0, 0, 0.534); */
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  /* box-shadow: 0 3px 12px rgb(0, 0, 0); */
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #686d76;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+   
+   /* Just come optional fonts and characters for styling */
+      @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Code+Pro");
+      /* FontAwesome cdn fonts */
+      @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      /* Sample styling for comments and commenting controls */
+      #allcomments {
+        width: 90%;
+        margin: 1em 0 4em 1em;
+        padding: 1%;
+        border: solid 1px gray;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px silver;
+      }
+
+      ul#pastcomments {
+        list-style-type: none;
+      }
+
+      ul#pastcomments li:before {
+        font-family: FontAwesome;
+        content: "\f086";
+        font-size: 24pt;
+        color: gray;
+        margin-left: -42px;
+        padding-right: 10px;
+        position: relative;
+        top: 8px;
+      }
+
+      ul#pastcomments li {
+        margin: 0 0 2em 0;
+        padding: 10px;
+      }
+
+      ul#pastcomments li span {
+        font-size: 80%;
+        color: gray;
+        font-style: italic;
+      }
+
+      form#newcomment textarea {
+        height: 72px;
+      }
+
+      form#newcomment label {
+        display: inline-block;
+        margin: 1em 0 0 0;
+      }
+
+      form#newcomment textarea,
+      form#newcomment input[type="text"] {
+        margin-top: 0;
+      }
+      #btnSubmitComment{
+
+        border-radius: 5px;
+    background-color: #8d1f28;
+    border: 2px solid #8d1f28;
+    color: #fff;
+    font-size: 15px;
+    font-family: "cocoonCustomSecondary";
+    line-height: 1.2;
+    line-height: 29px;
+    height: 35px;
+    padding: 0 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;      }
+    #btnSubmitComment:hover{
+background-color: #fff;
+color: #8d1f28;
+    }
+    </style>
+  </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script>
+      (function($) { // Begin jQuery
+    $(function() { // DOM ready
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function(e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        // Close one dropdown when selecting another
+        $('.nav-dropdown').not($(this).siblings()).hide();
+        e.stopPropagation();
+      });
+      // Clicking away from dropdown will remove the dropdown class
+      $('html').click(function() {
+        $('.nav-dropdown').hide();
+      });
+      // Toggle open and close nav styles on click
+      $('#nav-toggle').click(function() {
+        $('nav ul').slideToggle();
+      });
+      // Hamburger to X toggle
+      $('#nav-toggle').on('click', function() {
+        this.classList.toggle('active');
+      });
+    }); // end DOM ready
+  })(jQuery); // end jQuery
+    </script>
+ 
+ <body>
+    <div id="allcomments">
+      <h3>Comments</h3>
+      <!-- We will show past comments in the list below-->
+      <ul id="pastcomments"></ul>
+      <!-- This is the form for entering a new comment -->
+      <form id="newcomment">
+        <label for="tbName">First Name </label>
+        <br />
+        <input id="tbName" type="text" maxlength="20" required />
+        <br />
+        <label for="txComment">Your Comment / Question<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-fill" viewBox="0 0 16 16">
+          <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+        </svg></label>
+        <br />
+        <textarea
+          id="txComment"
+          maxlength="4096"
+          required
+          style="width: 76% "
+        ></textarea>
+        <br />
+        <input  type="submit" id="btnSubmitComment" value="send Comment" />
+      </form>
+    </div>
+    <!-- Connection to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase - be sure to use your own code, this connects to my database.
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBqKX1_Jmhm809kqW3SBifAjmVfzLfC-0w",
+        authDomain: "comments2-a5f2e.firebaseapp.com",
+        databaseURL: "https://hacker-79dc8-default-rtdb.firebaseio.com/",
+        projectId: "comments2-a5f2e",
+        storageBucket: "comments2-a5f2e.appspot.com",
+        messagingSenderId: "617710094361",
+      };
+      firebase.initializeApp(config);
+      //Rootref is the whole database.
+      const rootRef = firebase.database().ref();
+      //commentsRef is just the pageCountsNode
+      const commentsRef = rootRef.child("comments");
+      //Listen for click on Submit Comment button, and post comment.
+      document
+        .getElementById("btnSubmitComment")
+        .addEventListener("click", function () {
+          //Replace line breaks in comment with br tags.
+          var newcomment = document
+            .getElementById("txComment")
+            .value.replace(/\n/g, "<br>");
+          //Define a new, keyed post.
+          var newPostRef = commentsRef.push();
+          //Fill tne new keyed post with data
+          newPostRef.set({
+            name: document.getElementById("tbName").value.trim(),
+            comment: newcomment.trim(),
+            frompage: location.pathname,
+            when: firebase.database.ServerValue.TIMESTAMP,
+          });
+        });
+
+      function showpastcomments() {
+        var showat = document.getElementById("pastcomments");
+        //Get comments whose from page equals this page's pathname.
+        var commentsRef = firebase
+          .database()
+          .ref("comments/")
+          .orderByChild("frompage")
+          .equalTo(location.pathname);
+        commentsRef.once("value", function (snapshot) {
+          snapshot.forEach(function (itemSnapshot) {
+            //Get the object for one snapshot
+            var itemData = itemSnapshot.val();
+            var comment = itemData.comment;
+            var name = itemData.name;
+            var when = new Date(itemData.when).toLocaleDateString("en-us");
+            showat.innerHTML +=
+              "<li>" +
+              comment +
+              "<span> -- " +
+              name +
+              " (" +
+              when +
+              ")</span></li>";
+          });
+        });
+      }
+      //Called when page first opens and also after Submit button click to show all comments for this page.
+      showpastcomments();
+    </script>
+  </body>
+</html>
